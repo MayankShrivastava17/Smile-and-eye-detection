@@ -26,7 +26,7 @@ webcam=cv2.VideoCapture(0)
 
 while True:
     _, frame=webcam.read()
-    gray=cv2.cvtColor(qrame,cv2.COLOR_BGR2GRAY)
+    gray=cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
     canvas=detect(gray,frame)
     cv2.imshow('Face and Eye Detection',canvas)
     if cv2.waitKey(1) & 0xFF==ord('q'):
